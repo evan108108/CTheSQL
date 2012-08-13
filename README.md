@@ -26,10 +26,6 @@ Usage
 
     $model = new MyModelName('search');
     
-    $model->attributes = $_GET['MyModelName'];
-    
-    $dataProvider = $model->search();
-    
     $sql = $model->sql; //Default Data Provider is 'search'
         
 	echo $sql;
