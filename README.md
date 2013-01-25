@@ -12,10 +12,14 @@ Installation
 * Extract of clone to your application.extensions folder
 * Add the following to your main config: 
 
-    `'import'=>array(..,'ext.CTheSQL.*',)`
+    ```php
+    'import'=>array(..,'ext.CTheSQL.*',) 
+    ```
 * Add CTheSQL behavior to your desired model(s): 
 
-    `public function behaviors(){ return array(..,'CTheSQL'=>'ext.CTheSQL.CTheSQL',); } `  
+    ```php
+    public function behaviors(){ return array(..,'CTheSQL'=>'ext.CTheSQL.CTheSQL',); }
+    ```  
     
 --- 
     
@@ -23,16 +27,16 @@ Installation
 Usage
 -----
 #### Example 1 ####
-
+```php
     $model = new MyModelName('search');
     
     $sql = $model->sql; //Default Data Provider is 'search'
         
 	echo $sql;
-	
+```
 	
 #### Example 2 ####
-
+```php
 	model = new MyModelName('search');
     
     $model->attributes = $_GET['MyModelName'];
@@ -42,9 +46,6 @@ Usage
 	$dataProvider->criteria->addCondition('t.status > 0');
     
     $sql = $model->getSql($dataProvider); //optional 2nd param tableAlias default = 't'
-        
+  
 	echo $sql;
-
-
-
-    
+``` 
